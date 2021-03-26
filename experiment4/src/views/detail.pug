@@ -1,0 +1,10 @@
+extends layouts/main
+include mixins/videoBlock
+
+block content
+    if movie
+        +detailBlock({
+            title:movie.title,
+            summary:movie.summary,
+            genres:movie.genres
+        })
