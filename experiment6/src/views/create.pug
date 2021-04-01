@@ -1,0 +1,11 @@
+extends layouts/main
+
+block content 
+    h1 Create
+    form(action=`${routes.create}`, method="post")
+        input(type="text",placeholder="Title",name="title",required=true)
+        input(type="number",placeholder="Year",name="year",required=true)
+        input(type="text",placeholder="Rating",name="rating",required=true)
+        textarea(name="synopsis", placeholder="Synopsis",required=true)
+        input(type="text",placeholder="Genres",name="genres",required=true)
+        input(type="submit", value="Submit")

@@ -1,0 +1,9 @@
+extends layouts/main
+
+block content 
+    h1 Filtering by #{filter}: #{value}
+    if movies.length === 0
+        h3 404 No Found
+    each item in movies 
+        a(href=routes.movieDetail(item.id))
+            h3=item.title
