@@ -1,0 +1,7 @@
+extends layouts/main
+
+block content
+    h1 TXT2HTML!
+    form(action="/", method="post", enctype="multipart/form-data")
+        input(type="file",id="file",name="txtFile",required=true,accept="text/plain")
+        input(type="submit", value="Convert!")
